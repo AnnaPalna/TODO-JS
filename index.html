@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://kit.fontawesome.com/f005f42173.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="content">
+    <div class="wrapper">
+        <div class="new-task">
+            <h1 class="new-task__title">Tasks</h1>
+            
+            <div class="new-task__elem">
+                
+                <input type="text" maxlength = '20' class="message" placeholder="Description"> 
+                <button class='add'>Add</button>
+            </div>
+
+        </div>
+
+        <div class="items">
+            
+            <div class="item">
+                <div class="item-title">
+                    <h2>To do:<span class='todo-title'>0</span></h2>
+                </div>
+               <ul class="todo">
+               </ul>
+            </div>
+            <!-- <h2 class='item__title'>Doing</h2> -->
+            <div class="item example">
+                <div class="item-title">
+                    <h2>Doing:<span class='doing-title'>0</span></h2>
+                </div>
+                <ul class="doing">
+                    
+
+                </ul>
+                
+            </div>
+            <!-- <h2 class='item__title'>Done</h2> -->
+            <div class="item">
+                <div class="item-title">
+                    <h2>Done:<span class='done-title'>0</span></h2>
+                </div>
+                <ul class="done">
+
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
