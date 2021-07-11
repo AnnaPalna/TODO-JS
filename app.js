@@ -1,7 +1,4 @@
 let addMessage = document.querySelector('.message')
-
-let addedMessage = `${addMessage.value}`;
-
 let addButton = document.querySelector('.add')
 let todoList = document.querySelector('.todo')
 let doingList = document.querySelector('.doing')
@@ -20,6 +17,7 @@ let doneTitle = document.querySelector('.done-title')
 // Добавление новой задачи в список
 
 addButton.addEventListener('click', () => {
+    let addedMessage = `${addMessage.value}`;
 
 
     let newToDo = {
