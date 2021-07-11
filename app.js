@@ -1,4 +1,7 @@
 let addMessage = document.querySelector('.message')
+
+let addedMessage = `${addMessage.value}`;
+
 let addButton = document.querySelector('.add')
 let todoList = document.querySelector('.todo')
 let doingList = document.querySelector('.doing')
@@ -17,7 +20,7 @@ let doneTitle = document.querySelector('.done-title')
 // Добавление новой задачи в список
 
 addButton.addEventListener('click', () => {
-    let addedMessage = `${addMessage.value}`;
+
 
     let newToDo = {
         value: addMessage.value,
@@ -39,8 +42,8 @@ addButton.addEventListener('click', () => {
     let liTodo = document.createElement('li');
     liTodo.classList.add('todo-li');
 
-    liTodo.innerHTML = `<div class='start'><button class='left-icon-button'><i class="fas fa-times fa-lg"></i></button><span class='text'>
-    ${addedMessage}</span><button class='icon-button'><i class="forward fas fa-arrow-circle-right fa-lg"></i>
+    liTodo.innerHTML = `<div class='start'><button class='left-icon-button'><i class="fas fa-times fa-lg"></i></button><span class='text'><b>${addedMessage}</b>
+    </span><button class='icon-button'><i class="forward fas fa-arrow-circle-right fa-lg"></i>
     </button>
     </div>`;
 
@@ -97,16 +100,15 @@ document.addEventListener('click', function (event) {
 //Перевод задачи в статус Done
 
 doingList.addEventListener('click', function (event) {
-    let addedMessage = `${addMessage.value}`;
+
     if (event.target.classList.contains('forward')) {
         let li = event.target.closest('li');
         li.className = 'done-li';
+        let value = li.querySelector('b');
         li.innerHTML= `<div class='start'><button class='left-icon-button'><i class="fas fa-times fa-lg"></i></button><span class='text'>
-        ${addedMessage}</span></div>`;
+        <b>${value.textContent}</b></span></div>`;
 
         doneList.append(li);
-
-
         //количество задач в doing
         countDoing--;
         doingTitle.textContent = countDoing; 
